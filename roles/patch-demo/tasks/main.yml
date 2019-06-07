@@ -1,0 +1,13 @@
+---
+
+- name: Update "{{ packages }}"
+  yum:
+    name: "{{ packages }}"
+    state: latest
+
+- name: Update kernel
+  yum:
+    name: kernel
+    state: latest
+  notify: reboot server
+  tags: update-kernel

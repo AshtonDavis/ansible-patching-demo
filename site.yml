@@ -1,0 +1,6 @@
+---
+- name: Demo: Patching with Ansible
+  hosts: all
+
+  roles:
+    - patch-demo
